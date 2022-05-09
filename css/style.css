@@ -29,9 +29,28 @@ body {
   transition: all 02.s ease;
   cursor: pointer;
   font-weight:bold;
+  margin-top:30px;
 }
 
 .restart:hover {
   background: #4c6986;
   color: white;
+}
+
+.game {
+  width: 500px;
+  height:500px;
+}
+
+.header {
+  display:flex;
+  color:#9A9A9A;
+  font-size:24px;
+
+}
+
+.board {
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3,1fr);
 }
