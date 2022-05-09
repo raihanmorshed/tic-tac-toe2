@@ -16,6 +16,9 @@ export default class Game {
     }
 
     makeMove(i) {
+        if (this.board[i]){
+            return;
+        }
         this.board[i] = this.turn; //X or O
     }
 
