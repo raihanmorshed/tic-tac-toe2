@@ -5,6 +5,11 @@ let game = new Game();
 let gameView = new GameView();
 // gameView.updateBoard(game);
 
+document.querySelector(".restart")
+.addEventListener("click", () => { 
+    onRestartClick();
+})
+
 let tiles = document.querySelectorAll(".board-tile");
 tiles.forEach((tile) => {
     tile.addEventListener("click", () => {
@@ -20,9 +25,11 @@ function onTileClick(i){
     //do something
     game.makeMove(i);
     gameView.updateBoard(game);
-     //change turn
-     game.nextTurn();
+}
 
+function onRestartClick(){
+    game = new Game();
+    gameView.updateBoard(game);
 }
 
 
